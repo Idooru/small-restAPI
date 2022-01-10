@@ -1,0 +1,14 @@
+{
+    "name": "learn-httpserver",
+    "version": "1.0.0",
+    "description": "",
+    "main": "cookie2.js",
+    "scripts": {
+        "start": "nodemon restServer.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "nodemon": "^2.0.15"
+    }
+}
