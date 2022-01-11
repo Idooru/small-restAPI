@@ -21,7 +21,7 @@ http.createServer(async (req, res) => {
                 return res.end(data);
             } else if (req.url === "/users") {
                 res.writeHead(200, {
-                    "Content-Type": "text/plain; charset=utf-8",
+                    "Content-Type": "text/html; charset=utf-8",
                 });
                 return res.end(JSON.stringify(users));
             }
@@ -45,7 +45,9 @@ http.createServer(async (req, res) => {
                     const { name } = JSON.parse(body);
                     const id = Date.now();
                     users[id] = name;
-                    res.writeHead(201);
+                    res.writeHead(201, {
+                        "Content-Type": "text/json; chatset=utf-8",
+                    });
                     res.end("등록 성공");
                 });
             }
